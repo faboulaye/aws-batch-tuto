@@ -1,0 +1,44 @@
+{
+  "name": "aws-batch-tuto",
+  "version": "1.0.0",
+  "description": "AWS Batch tutorial - Load file content and insert that in Dynamodb",
+  "keywords": [
+    "AWS",
+    "Batch",
+    "Job",
+    "Typescript",
+    "Javascript",
+    "NodeJs",
+    "Dynamodb"
+  ],
+  "author": "F.Aboulaye",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faboulaye/aws-batch-tuto.git"
+  },
+  "homepage": "https://github.com/faboulaye/aws-batch-tuto#README.md",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon ",
+    "start": "npm run build && node -r dotenv/config build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build -t faboulaye/${npm_package_name}:${npm_package_version} .",
+    "docker:push": "docker push faboulaye/${npm_package_name}:${npm_package_version}",
+    "docker:run": "docker run --rm faboulaye/${npm_package_name}:${npm_package_version}"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.8.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.650.0",
+    "csv-parser": "^2.3.2"
+  }
+}
