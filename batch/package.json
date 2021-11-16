@@ -38,7 +38,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "aws-sdk": "^2.650.0",
+    "aws-sdk": "^2.814.0",
     "csv-parser": "^2.3.2"
   }
 }
